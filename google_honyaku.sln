@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "google_honyaku", "google_honyaku\google_honyaku.csproj", "{9C1C68E9-D791-4BDA-A0EF-B961C0D8432D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C1C68E9-D791-4BDA-A0EF-B961C0D8432D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C1C68E9-D791-4BDA-A0EF-B961C0D8432D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C1C68E9-D791-4BDA-A0EF-B961C0D8432D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C1C68E9-D791-4BDA-A0EF-B961C0D8432D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CE0F58D4-ED21-47C8-A2BC-6FA4C8D7739B}
+	EndGlobalSection
+EndGlobal
