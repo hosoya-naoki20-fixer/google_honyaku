@@ -21,6 +21,7 @@ namespace google_honyaku.Model
 
         public GetClipboardTextAndHonyakuAndChangeHoverText() {
             dataText = new DataTextEntity();
+            dataTextObjects.data = dataText;
         }
         /// <summary>
         /// メインの処理
@@ -35,7 +36,9 @@ namespace google_honyaku.Model
             }
             else 
             {
-                classNotifyIcon.notifyIcon.Text = "※String too long";
+                string overText = dataText.HonyakuText.Substring(0, 62) + "…";
+                //classNotifyIcon.notifyIcon.Text = dataText.HonyakuText.Substring(0, 63);
+                classNotifyIcon.notifyIcon.Text = overText;
             }
         }
 
@@ -44,7 +47,7 @@ namespace google_honyaku.Model
         /// クリップボードの内容を取得して返すメソッド
         /// </summary>
         /// <returns></returns>
-        static private string getClipBoardText() {
+        private string getClipBoardText() {
             IDataObject data = Clipboard.GetDataObject();
             string returnStr = "";
             if (data != null) {
@@ -56,8 +59,6 @@ namespace google_honyaku.Model
             }
             return (returnStr);
         }
-
-
 
 
         /// <summary>
@@ -90,8 +91,6 @@ namespace google_honyaku.Model
             return returnLanguageType;
         }
 
-
-
         /// <summary>
         /// 翻訳した結果を取得するメソッド
         /// </summary>
@@ -115,6 +114,8 @@ namespace google_honyaku.Model
             return (resultText);
             
         }
+
+
         
         /// <summary>
         /// リクエストのためのURLの生成を行う
@@ -124,14 +125,14 @@ namespace google_honyaku.Model
         {
             string returnUrl;
             string baseUrl = "https://script.google.com/macros/s/AKfycbzQ1yQiZghWre8NScJzBwLUNEp9CvwME7X1DyH2txWz9o5jArkJ/exec";
-            string text = dataText.ClipBoardText;
+            string text;
             string source;
             string target;
 
-            //スペースを"%20"に変換
-            text = dataText.ClipBoardText.Replace(" ", "%20");
-            text = text.Replace("　", "%20");
+            
 
+            text = Uri.EscapeDataString(dataText.ClipBoardText);
+            Console.WriteLine("エスケープテキスト"+text);
 
             if (dataText.LangType == LanguageType.Japanese)
             {
@@ -168,11 +169,7 @@ namespace google_honyaku.Model
             return (returnUrl);
         }
 
-        private void changeHoverText(string honyakuText) 
-        {
-            //NotifyIconWrapper notify = new NotifyIconWrapper();
-            //notify.Text = honyakuText;
-        }
+        
 
     }
 }

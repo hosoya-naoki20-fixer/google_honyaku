@@ -42,7 +42,7 @@ namespace google_honyaku
             // 
             this.notifyIcon.ContextMenuStrip = this.notifyIconContextMenu;
             this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
-            this.notifyIcon.Text = "ああああああああ";
+            this.notifyIcon.Text = "結果は未取得です";
             this.notifyIcon.Visible = true;
             // 
             // notifyIconContextMenu
