@@ -29,7 +29,14 @@ namespace google_honyaku.Model
             dataText.ClipBoardText = getClipBoardText();
             dataText.LangType = checkLangType();
             dataText.HonyakuText = getTrancelationResult();
-            classNotifyIcon.notifyIcon.Text = dataText.HonyakuText;
+            if (dataText.HonyakuText.Length < 64)
+            {
+                classNotifyIcon.notifyIcon.Text = dataText.HonyakuText;
+            }
+            else 
+            {
+                classNotifyIcon.notifyIcon.Text = "※String too long";
+            }
         }
 
 
