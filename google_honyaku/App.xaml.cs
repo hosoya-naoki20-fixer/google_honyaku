@@ -21,10 +21,6 @@ namespace google_honyaku
         /// </summary>
         public NotifyIconWrapper notifyIcon;
 
-
-        
-
-
         /// <summary>
         /// クリップボードを監視
         /// </summary>
@@ -52,5 +48,4 @@ namespace google_honyaku
             this.notifyIcon.Dispose();
         }
     }
-
 }
