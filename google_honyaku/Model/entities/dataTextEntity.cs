@@ -10,7 +10,7 @@ namespace google_honyaku.Model.entities
     /// <summary>
     /// クリップボードから取得したテキストや、翻訳結果、各種フラグを格納するためのエンティティクラス
     /// </summary>
-    class DataTextEntity
+    public class DataTextEntity
     {
         /// <summary>
         /// クリップボードから取得した文字列
@@ -19,7 +19,7 @@ namespace google_honyaku.Model.entities
         /// <summary>
         /// 翻訳後のテキスト
         /// </summary>
-        public string HonyakuText { get; set; }
+        public string HonyakuText { get; set; } = "";
         /// <summary>
         /// 翻訳前テキストの言語の種類
         /// </summary>

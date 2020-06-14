@@ -70,6 +70,7 @@
     </Compile>
     <Compile Include="Model\ClipBoardWatcher.cs" />
     <Compile Include="Model\entities\dataTextEntity.cs" />
+    <Compile Include="Model\entities\dataTextObjects.cs" />
     <Compile Include="Model\entities\notifyIconObject.cs" />
     <Compile Include="Model\entities\valueObjects\languageType.cs" />
     <Compile Include="Model\GetClipboardTextAndHonyakuAndChangeHoverText.cs" />
